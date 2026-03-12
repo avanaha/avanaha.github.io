@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://feldsher-ryadom.ru/sitemap.xml
