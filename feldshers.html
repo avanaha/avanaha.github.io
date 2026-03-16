@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Безопасность: HTTP-заголовки через meta-теги -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://t.me; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
+    
     <!-- SEO Мета-теги -->
     <title>Работа фельдшером в Ижевске | Вакансии | ФЕЛЬДШЕРЪ.РЯДОМ.</title>
     <meta name="description" content="Вакансия фельдшера в Ижевске. Официальное трудоустройство, зарплата от 42 000 до 50 000 ₽, смены по 5 часов. Совмещение возможно. Индустриальный район.">
