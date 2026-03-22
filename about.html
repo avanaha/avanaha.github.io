@@ -8,7 +8,7 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://t.me https://max.ru https://vk.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://t.me https://max.ru https://vk.com https://planeta.ru; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
     
     <!-- Ускорение загрузки -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -110,12 +110,16 @@
         .trust-list li:last-child { border-bottom: none; }
         .trust-list li::before { content: "✅"; font-size: 16px; flex-shrink: 0; }
         
-        .links-box { background: white; border-radius: 12px; padding: 20px; border: 2px solid #722F37; }
-        .links-box h3 { margin-bottom: 12px; color: #1E3A5F; font-size: 16px; }
-        .link-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: #f5f5f5; border-radius: 8px; margin-bottom: 8px; text-decoration: none; color: inherit; transition: all 0.2s; font-size: 14px; }
-        .link-item:hover { background: #722F37; color: white; }
-        .link-item span { font-size: 20px; }
-        .link-item small { opacity: 0.8; }
+        .channels-box { background: white; border-radius: 12px; padding: 20px; border: 2px solid #722F37; }
+        .channels-section { margin-bottom: 20px; }
+        .channels-section:last-child { margin-bottom: 0; }
+        .channels-section h3 { font-size: 15px; font-weight: bold; margin-bottom: 12px; color: #1E3A5F; display: flex; align-items: center; gap: 8px; }
+        .channels-section h3 .icon { font-size: 18px; }
+        .channel-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: #f5f5f5; border-radius: 8px; margin-bottom: 8px; text-decoration: none; color: inherit; transition: all 0.2s; font-size: 14px; }
+        .channel-item:last-child { margin-bottom: 0; }
+        .channel-item:hover { background: #722F37; color: white; }
+        .channel-item span { font-size: 20px; }
+        .channel-item small { opacity: 0.8; }
         
         .crowdfunding { background: #f5f5f5; border-radius: 12px; padding: 24px; text-align: center; margin: 28px 0; }
         .crowdfunding h3 { font-size: 18px; margin-bottom: 10px; color: #1E3A5F; }
@@ -194,7 +198,7 @@
         
         <section class="section">
             <h2>Где мы сейчас</h2>
-            <p>Проект находится в активной стадии подготовки. Уже зарегистрировано ООО «Фельдшер и компания», разработаны все внутренние документы, созданы подробные инструкции для фельдшеров (СОПы), а также Telegram-каналы и бот для сбора заявок.</p>
+            <p>Проект находится в активной стадии подготовки. Уже зарегистрировано ООО «Фельдшер и компания», разработаны все внутренние документы, созданы подробные инструкции для фельдшеров (СОПы), а также каналы и бот для сбора заявок.</p>
             <p>Осталось самое главное — найти помещение и провести ремонт. Для этого мы запустили сбор средств на краудфандинговой платформе Planeta.ru.</p>
         </section>
         
@@ -204,46 +208,54 @@
                 <li>Мы официально зарегистрированы (ИНН 1800048162, ОГРН 1261800002694)</li>
                 <li>Фельдшеров будем отбирать с привлечением внешнего врача-куратора</li>
                 <li>Мы разработали внутренние регламенты, чтобы исключить ошибки</li>
-                <li>После открытия будем регулярно делиться новостями в Telegram-канале</li>
+                <li>После открытия будем регулярно делиться новостями в каналах</li>
             </ul>
         </section>
         
         <div class="crowdfunding">
             <h3>🎉 Поддержите нас</h3>
             <p>Мы уже сделали большую организационную работу, но без вашей помощи не сможем сделать решающий шаг. Любая сумма важна.</p>
-            <a href="#" class="btn-primary">👉 Ссылка на краудфандинг</a>
-            <p style="font-size: 12px; margin-top: 10px; color: #999;">[здесь будет ссылка на Planeta.ru]</p>
+            <a href="https://planeta.ru/campaigns/feldsherryadom" target="_blank" rel="noopener" class="btn-primary">👉 Поддержать на Planeta.ru</a>
         </div>
         
         <section class="section">
             <h2>Оставайтесь на связи</h2>
             <p>Подписывайтесь на наши каналы:</p>
-            <div class="links-box">
-                <h3>📢 Наши каналы</h3>
-                <a href="https://t.me/FeldsherRyadom" target="_blank" rel="noopener" class="link-item">
-                    <span>📢</span>
-                    <div><strong>Telegram-канал для пациентов</strong><br><small>@FeldsherRyadom</small></div>
-                </a>
-                <a href="https://t.me/FeldsherIzh" target="_blank" rel="noopener" class="link-item">
-                    <span>👩‍⚕️</span>
-                    <div><strong>Telegram-канал для фельдшеров</strong><br><small>@FeldsherIzh</small></div>
-                </a>
-                <a href="https://t.me/FeldsherRyadomBot" target="_blank" rel="noopener" class="link-item">
-                    <span>🤖</span>
-                    <div><strong>Бот для связи и предзаписи</strong><br><small>@FeldsherRyadomBot</small></div>
-                </a>
+            <div class="channels-box">
+                <div class="channels-section">
+                    <h3><span class="icon">🏥</span> ПАЦИЕНТАМ</h3>
+                    <a href="https://max.ru/join/56sp6ngnZou3IeaUAUqfiopUefYBUMacUwg1ExkHAa8" target="_blank" rel="noopener" class="channel-item">
+                        <span>💬</span>
+                        <div><strong>Макс</strong><br><small>Фельдшеръ.Рядом | Ижевск</small></div>
+                    </a>
+                    <a href="https://vk.com/feldsherryadom" target="_blank" rel="noopener" class="channel-item">
+                        <span>👥</span>
+                        <div><strong>ВКонтакте</strong><br><small>Фельдшеръ.Рядом | Ижевск</small></div>
+                    </a>
+                </div>
+                <div class="channels-section">
+                    <h3><span class="icon">👩‍⚕️</span> ФЕЛЬДШЕРАМ</h3>
+                    <a href="https://max.ru/join/rre51qvmREhGKRnNFf4vcVZ_U3mj_obCY8L2wNHAxo8" target="_blank" rel="noopener" class="channel-item">
+                        <span>💬</span>
+                        <div><strong>Макс</strong><br><small>Фельдшеры Ижевска | Вакансии и резерв</small></div>
+                    </a>
+                    <a href="https://vk.com/feldsherizh" target="_blank" rel="noopener" class="channel-item">
+                        <span>👥</span>
+                        <div><strong>ВКонтакте</strong><br><small>Фельдшеры Ижевска | Вакансии и резерв</small></div>
+                    </a>
+                </div>
             </div>
-            <p style="margin-top: 16px; font-size: 14px;">Пишите в бот или на почту <a href="mailto:feldland@yandex.ru" style="color: #722F37;">feldland@yandex.ru</a></p>
+            <p style="margin-top: 16px; font-size: 14px;">Пишите в бот <a href="https://max.ru/id1800048162_1_bot" target="_blank" style="color: #722F37;">@id1800048162_1_bot</a> или на почту <a href="mailto:feldland@yandex.ru" style="color: #722F37;">feldland@yandex.ru</a></p>
         </section>
     </main>
 
     <footer>
         <p>© 2026 ООО «Фельдшер и Ко»</p>
-        <p>📞 +7-965-843-78-18 · 📧 feldland@yandex.ru</p>
+        <p>🤖 <a href="https://max.ru/id1800048162_1_bot" target="_blank" rel="noopener">@id1800048162_1_bot</a> · 📧 feldland@yandex.ru</p>
         <div class="footer-links">
-            <a href="https://t.me/FeldsherRyadom" target="_blank" rel="noopener">Telegram</a>
+            <a href="https://max.ru/join/56sp6ngnZou3IeaUAUqfiopUefYBUMacUwg1ExkHAa8" target="_blank" rel="noopener">Макс</a>
             <span>·</span>
-            <a href="https://t.me/FeldsherRyadomBot" target="_blank" rel="noopener">Бот</a>
+            <a href="https://vk.com/feldsherryadom" target="_blank" rel="noopener">ВК</a>
             <span>·</span>
             <a href="legal.html">Правовая информация</a>
             <span>·</span>
