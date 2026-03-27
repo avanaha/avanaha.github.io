@@ -8,11 +8,11 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://t.me https://max.ru https://vk.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://max.ru https://vk.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
     
-    <!-- Ускорение загрузки -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Ускорение загрузки: dns-prefetch для внешних доменов -->
+    <link rel="dns-prefetch" href="https://max.ru">
+    <link rel="dns-prefetch" href="https://vk.com">
     
     <!-- SEO -->
     <title>Правовая информация | ФЕЛЬДШЕРЪ.РЯДОМ.</title>
@@ -33,12 +33,11 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>Ф</text></svg>">
     
-    <!-- Шрифт -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Системный шрифт для мгновенной загрузки -->
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, Arial, sans-serif; background: #fafafa; color: #1a1a2e; line-height: 1.6; }
+        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fafafa; color: #1a1a2e; line-height: 1.6; }
         
         .text-burgundy { color: #722F37; }
         .text-blue { color: #1E3A5F; }
