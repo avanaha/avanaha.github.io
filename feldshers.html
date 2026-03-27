@@ -8,11 +8,11 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://t.me https://max.ru https://vk.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://max.ru https://vk.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
     
-    <!-- Ускорение загрузки -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Ускорение загрузки: dns-prefetch для внешних доменов -->
+    <link rel="dns-prefetch" href="https://max.ru">
+    <link rel="dns-prefetch" href="https://vk.com">
     
     <!-- SEO -->
     <title>Работа фельдшером в Ижевске | Вакансии | ФЕЛЬДШЕРЪ.РЯДОМ.</title>
@@ -39,8 +39,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>Ф</text></svg>">
     
-    <!-- Шрифт -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Системный шрифт для мгновенной загрузки -->
     
     <!-- Schema.org -->
     <script type="application/ld+json">
@@ -61,7 +60,7 @@
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, Arial, sans-serif; background: #fafafa; color: #1a1a2e; line-height: 1.6; }
+        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fafafa; color: #1a1a2e; line-height: 1.6; }
         
         .bg-burgundy { background: linear-gradient(135deg, #722F37 0%, #8B3A44 50%, #5A252C 100%); }
         .bg-blue { background: linear-gradient(135deg, #1E3A5F 0%, #2D4A6F 50%, #0F2940 100%); }
@@ -205,12 +204,11 @@
         .footer-links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 12px; font-size: 13px; }
         .footer-links span { color: #555; }
         
-        /* Blobs */
-        .blob1, .blob2, .blob3 { position: fixed; border-radius: 50%; filter: blur(60px); opacity: 0.3; pointer-events: none; z-index: 0; animation: pulse 4s ease-in-out infinite; will-change: opacity; }
+        /* Декоративные элементы - статичные для производительности */
+        .blob1, .blob2, .blob3 { position: fixed; border-radius: 50%; filter: blur(60px); opacity: 0.2; pointer-events: none; z-index: 0; }
         .blob1 { top: 10%; left: 5%; width: 250px; height: 250px; background: #722F37; }
-        .blob2 { top: 20%; right: 10%; width: 300px; height: 300px; background: #1E3A5F; animation-delay: 2s; }
-        .blob3 { bottom: 10%; left: 30%; width: 250px; height: 250px; background: #2D4A6F; animation-delay: 4s; }
-        @keyframes pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.5; } }
+        .blob2 { top: 20%; right: 10%; width: 300px; height: 300px; background: #1E3A5F; }
+        .blob3 { bottom: 10%; left: 30%; width: 250px; height: 250px; background: #2D4A6F; }
         @media (max-width: 768px), (prefers-reduced-motion: reduce) { .blob1, .blob2, .blob3 { display: none; } }
     </style>
 </head>
